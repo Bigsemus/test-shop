@@ -1,0 +1,33 @@
+{
+  "navBar": {
+    "Home": "Home"
+  },
+  "header": {
+    "sortMovies": "SORT MOVIES",
+    "movie": "MOVIES",
+    "actor": "ACTOR"
+  },
+  "login": {
+    "login": "Please login",
+    "ask": "Do not you have an account?",
+    "prompt": "Go to Register page"
+  },
+  "register": {
+    "register": "Please register",
+    "ask": "Do not you have an account?",
+    "prompt": "Go to Login page"
+  },
+  "buttons": {
+    "submit": "Submit",
+    "login": "login",
+    "register": "register"
+  },
+  "input": {
+    "loginName": "Enter your name",
+    "loginPass": "Enter your password"
+  },
+  "logout": {
+    "logout": "LogOut"
+  }
+
+}

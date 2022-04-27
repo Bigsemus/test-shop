@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.header {
+  position: fixed;
+  z-index: 1;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  background-color: #f9d10f;
+
+  div {
+    text-align: center;
+    margin-top: 17px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3b4d61;
+  }
+}
+
+.wrapperApp {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #3b4d61;
+
+  p {
+    color: honeydew;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 17px;
+    letter-spacing: 1px;
+  }
+}
+
+.actorWrap {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 150px;
+
+  p {
+    line-height: 1.5;
+    color: #3b4d61;
+
+    &:nth-child(3) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .posterActor {
+    width: 50%;
+    float: right;
+    height: 500px;
+  }
+}
+
+.wrapLogin {
+  width: 400px;
+  margin: 0 auto;
+  padding-top: 150px;
+
+  h2 {
+    margin-bottom: 20px;
+    color: #3b4d61;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      height: 40px;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    button {
+      width: 150px;
+      height: 30px;
+      margin: 0 auto 20px;
+      color: #f9d10f;
+      background-color: #3b4d61;
+      font-size: 18px;
+      border-radius: 5px;
+
+      &:hover {
+        color: #3b4d61;
+        background-color: #f9d10f;
+      }
+
+      a {
+        width: 100px;
+        color: #f9d10f;
+        text-decoration: none;
+
+        &:hover {
+          color: #3b4d61;
+        }
+      }
+    }
+  }
+
+}
+
+.wrapRecite {
+  width: 32%;
+  margin: 0 auto;
+  padding-top: 150px;
+
+  form {
+    display: flex;
+    justify-content: end;
+    flex-flow: row wrap;
+    margin-left: auto;
+
+    input {
+      height: 32px;
+      width: 385px;
+      margin: 10px 0 15px 15px;
+      font-size: 18px;
+    }
+
+    button{
+      background-color: #3b4d61;
+      color: #f9d10f;
+      border-radius: 5px;
+      padding: 3px 25px;
+      margin-left: 15px;
+      font-size: 17px;
+      &:hover {
+        background-color: #f9d10f;
+        color: #3b4d61;
+      }
+      a{
+        text-decoration: none;
+        color: #f9d10f;
+        &:hover{
+          color: #3b4d61;
+        }
+      }
+    }
+  }
+}
+
+.nav{
+  position: absolute;
+  right: 40px;
+}
+
+.active-link{
+  color: #f9d10f;
+  text-decoration: none;
+}
+
+.link{
+  color: #3b4d61;
+  text-decoration: none;
+}
+
+.langBtn{
+  position: absolute;
+  top: -5px;
+  right: 150px;
+  option{
+    background-color: #6b7b8c;
+    color: #f9d10f;
+    border-radius: 5px;
+  }
+  select{
+    background-color: #6b7b8c;
+    color: #f9d10f;
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+  }
+}
