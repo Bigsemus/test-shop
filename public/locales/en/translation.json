@@ -3,8 +3,8 @@
     "Home": "Home"
   },
   "header": {
-    "sortMovies": "SORT MOVIES",
-    "movie": "MOVIES",
+    "movieShop": "MOVIE SHOP",
+    "movie": "ONLY QUALITY MOVIES",
     "actor": "ACTOR"
   },
   "login": {
@@ -15,19 +15,27 @@
   "register": {
     "register": "Please register",
     "ask": "Do not you have an account?",
-    "prompt": "Go to Login page"
+    "prompt": "Go to Register page"
+  },
+  "buy": {
+    "buy": "Buy "
   },
   "buttons": {
+    "edit": "EDIT",
+    "delete": "DELETE",
     "submit": "Submit",
+    "back": "Go back",
     "login": "login",
     "register": "register"
   },
   "input": {
+    "title": "Title",
+    "url": "Url",
+    "description": "Description",
     "loginName": "Enter your name",
     "loginPass": "Enter your password"
   },
   "logout": {
     "logout": "LogOut"
   }
-
 }

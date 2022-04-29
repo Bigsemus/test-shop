@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 const PrivateRoute = () => {
     const isAuthSTATE = useSelector(
-        (state) => state.userToolkit.isAuth,
+        (state) => state.user.isAuth,
     );
 
     return (

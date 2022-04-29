@@ -1,9 +1,13 @@
 import {combineReducers, configureStore} from '@reduxjs/toolkit';
 import userSlice from './userData';
+import allProductsSlice from './fethProductList'
+import basketSlice from './basketProduct'
 
 const rootReducer = combineReducers(
     {
-        userToolkit: userSlice,
+        user: userSlice,
+        productList: allProductsSlice,
+        basket: basketSlice,
     },
 );
 

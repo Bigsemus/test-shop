@@ -1,0 +1,45 @@
+.productCard{
+  border: 2px solid #3b4d61;
+  border-radius: 4px;
+  width: 18%;
+  //height: 3;
+  margin: 0 0 7% 3%;
+
+}
+
+//.movieCardMain{
+//  display: flex;
+//  border: 1px solid #3b4d61;
+//  height: 87%;
+//}
+//
+.titleContent {
+    text-align: center;
+    padding: 7px 0 0 5px;
+    color: #f9d10f;
+    background-color: #6b7b8c;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 17px;
+    font-weight: bold;
+}
+.btnPriceBuy{
+  display: block;
+  width: 130px;
+  margin-left: auto;
+  font-size: 17px;
+  font-weight: bold;
+  color: #3b4d61;
+  background-color: #f9d10f;
+  border-radius: 3px;
+  &:hover {
+    background-color: #6b7b8c;
+    color: #f9d10f;
+  }
+}
+
+.poster{
+  width: 100%;
+  height: 92%;
+}
