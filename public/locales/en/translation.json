@@ -5,7 +5,7 @@
   "header": {
     "movieShop": "MOVIE SHOP",
     "movie": "ONLY QUALITY MOVIES",
-    "actor": "ACTOR"
+    "order": "It remains to place an order"
   },
   "login": {
     "login": "Please login",
@@ -17,21 +17,25 @@
     "ask": "Do not you have an account?",
     "prompt": "Go to Register page"
   },
-  "buy": {
-    "buy": "Buy "
-  },
   "buttons": {
     "edit": "EDIT",
     "delete": "DELETE",
     "submit": "Submit",
     "back": "Go back",
     "login": "login",
-    "register": "register"
+    "register": "register",
+    "doYouWant": "Do you want choose?",
+    "buy": "Buy ",
+    "bought": "bought"
+  },
+  "p": {
+    "didNotChoose": "You did not choose anything :("
   },
   "input": {
-    "title": "Title",
-    "url": "Url",
-    "description": "Description",
+    "name": "Name",
+    "surname": "Surname",
+    "address": "Address",
+    "phone": "Phone",
     "loginName": "Enter your name",
     "loginPass": "Enter your password"
   },

@@ -1,6 +1,6 @@
 import {combineReducers, configureStore} from '@reduxjs/toolkit';
 import userSlice from './userData';
-import allProductsSlice from './fethProductList'
+import allProductsSlice from './fetchProductList'
 import basketSlice from './basketProduct'
 
 const rootReducer = combineReducers(

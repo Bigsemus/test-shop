@@ -1,19 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import '../styles/App.scss';
 import {useDispatch, useSelector} from "react-redux";
-//import {getProductList} from '../store/basketProduct.js'
-import ProductItem from '../components/ProductItem/ProductItem';
-import getAllMovies from "../services/ProductsService";
-import {logDOM} from "@testing-library/react";
 import Loader from "../utils/helpers/Loader";
-import {fetchProductList} from "../store/fethProductList";
+import {fetchProductList} from "../store/fetchProductList";
 import LangBtn from "../utils/helpers/LangBtn";
-import { withTranslation } from 'react-i18next';
+import {withTranslation} from 'react-i18next';
 //import NavBar from "./NavBar";
 import LogOut from "../components/LogOut/LogOut";
 import ProductList from "../components/ProductList/ProductList";
 
-const HomePage = ({ t }) => {
+const HomePage = ({t}) => {
 
     const dispatch = useDispatch();
     useEffect(() => {
@@ -29,13 +25,12 @@ const HomePage = ({ t }) => {
         <div>
             <div className="header">
                 <div>
-                {t('header.movieShop')}
-                <LangBtn />
-                {/*<NavBar />*/}
-                <LogOut />
+                    {t('header.movieShop')}
+                    <LangBtn/>
+                    {/*<NavBar />*/}
+                    <LogOut/>
+                </div>
             </div>
-            </div>
-
             {isLoading && (
                 <Loader/>
             )}
@@ -49,12 +44,6 @@ const HomePage = ({ t }) => {
                 <ProductList
                     products={productsInfo}
                 />
-                // productsInfo.map(product => (
-                //     <ProductItem
-                //         product={product}
-                //         key={product.id}
-                //     />
-                // ))
             )}
             <div className="footer">
                 <p>Svietoslav_Kovalchuk</p>

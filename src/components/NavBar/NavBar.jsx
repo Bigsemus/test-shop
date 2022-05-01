@@ -7,7 +7,7 @@ const NavBar = ({ t }) => (
     <div>
         <nav className="nav">
             <NavLink
-                to="/movie"
+                to="/"
                 end
                 className={({ isActive }) => (isActive ? 'active-link' : 'link')}
             >
