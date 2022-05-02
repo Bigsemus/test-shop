@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import classes from "./TotalProductList.module.scss";
 import {useSelector} from "react-redux";
 import ProductItem from "../ProductItem/ProductItem";
 import TotalItem from "../TotalItem/TotalItem";
 
 const TotalProductList = ({totalPrice, totalProduct}) => {
+
     let price = totalProduct.length === 0 ? null : totalPrice.toFixed(2)
     return (
         <div>

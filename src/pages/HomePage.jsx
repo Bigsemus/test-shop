@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import '../styles/App.scss';
 import {useDispatch, useSelector} from "react-redux";
 import Loader from "../utils/helpers/Loader";
@@ -8,13 +8,29 @@ import {withTranslation} from 'react-i18next';
 //import NavBar from "./NavBar";
 import LogOut from "../components/LogOut/LogOut";
 import ProductList from "../components/ProductList/ProductList";
+import {setBasketFromLocalStorage} from "../store/basketProduct";
 
 const HomePage = ({t}) => {
-
     const dispatch = useDispatch();
+    const mounted = useRef()
     useEffect(() => {
-        dispatch(fetchProductList());
-    }, [dispatch]);
+        if (!mounted.current) {
+            //componentDidMount
+            const localStoragePrice = localStorage.getItem("price")
+            const localStorageOrder = localStorage.getItem("order")
+            if (localStorageOrder) {
+                const productDetails2 = {
+                    product: JSON.parse(localStorageOrder),
+                    price: Number(localStoragePrice),
+                };
+                dispatch(setBasketFromLocalStorage(productDetails2));
+            }
+            mounted.current = true;
+        } else {
+            //componentDidUpdate
+            dispatch(fetchProductList());
+        }
+    }, [dispatch])
 
     const isLoading = useSelector(state => state.productList.isLoading);
     const productError = useSelector(state => state.productList.error);

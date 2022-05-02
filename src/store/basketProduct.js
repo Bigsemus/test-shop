@@ -11,17 +11,26 @@ const basketSlice = createSlice({
             state.price += payload.price;
             state.product.push(payload.product);
         },
+        setBasketFromLocalStorage: (state, {payload}) => {
+            console.log(payload.product)
+            state.price = payload.price;
+             state.product = payload.product;
+        },
         addProduct: (state, {payload}) => {
             state.price += payload?.vote_average;
+            state.product = state.product.map((elem) => elem.id === payload.id ? payload : elem)
         },
         delProduct: (state, {payload}) => {
-            state.price -= payload.product?.vote_average;
-            if (payload.count <= 1) {
-                state.product = [...state.product.filter(product => product.id !== payload.product.id)];
+            state.price -= payload?.vote_average;
+            state.product = state.product.map((elem) => elem.id === payload.id ? payload : elem)
+            if (payload.countProduct < 1) {
+                state.product = [...state.product.filter(product => product.id !== payload.id)];
+                localStorage.removeItem('order')
+                localStorage.removeItem('price')
             }
         }
     },
 })
 
 export default basketSlice.reducer;
-export const {setBasketProduct, setOrderProduct, addProduct, delProduct} = basketSlice.actions;
+export const {setBasketProduct, addProduct, delProduct, setBasketFromLocalStorage} = basketSlice.actions;

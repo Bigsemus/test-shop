@@ -1,34 +1,30 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import classes from "./ProductItem.module.scss";
 import {useDispatch, useSelector} from "react-redux";
-import {setBasketProduct} from "../../store/basketProduct";
+import {setBasketFromLocalStorage, setBasketProduct} from "../../store/basketProduct";
 import {withTranslation} from "react-i18next";
+import {number} from "prop-types";
 
 
 const ProductItem = ({product, t}) => {
     const dispatch = useDispatch();
     const allProductsInBasket = useSelector(state => state.basket.product);
     const totalPriseInBasket = useSelector(state => state.basket.price);
+
+    localStorage.setItem("order", JSON.stringify(allProductsInBasket))
+    localStorage.setItem("price", totalPriseInBasket)
+
     const isProductChoosed = allProductsInBasket.some(item => item.id === product.id)
+
     function addMovieToBasket(product, price) {
+        const copyProduct = {...product};
+        copyProduct.countProduct = 1
         const productDetails = {
-            product: product,
+            product: copyProduct,
             price: price,
         };
         dispatch(setBasketProduct(productDetails));
-
     }
-    //////////////////////////////////
-    const [order, setOrder] = useState(null)
-    useEffect(() => {
-       // const localStorageRef = localStorage.getItem("price")
-       //  setOrder(JSON.parse(localStorageRef))
-        localStorage.setItem("order", JSON.stringify(allProductsInBasket))
-        localStorage.setItem("price", totalPriseInBasket)
-    })
-    // localStorage.setItem("order", JSON.stringify(allProductsInBasket))
-    // localStorage.setItem("price", totalPriseInBasket)
-    // console.log(order)
 
     return (
         <div className={classes.productCardWrap}>
@@ -42,7 +38,7 @@ const ProductItem = ({product, t}) => {
                     alt="poster"
                 />
                 <p className={classes.productOverview}>
-                  {product.overview}
+                    {product.overview}
                 </p>
             </div>
             <button

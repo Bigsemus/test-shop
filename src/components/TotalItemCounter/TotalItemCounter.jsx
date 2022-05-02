@@ -1,23 +1,23 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from './TotalItemCounter.module.scss'
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {addProduct, delProduct} from "../../store/basketProduct"
 
 const TotalItemCounter = ({product}) => {
     const dispatch = useDispatch();
-    let [count, setCount] = useState(1)
+    const copyProduct = {...product};
+    const allProductsInBasket = useSelector(state => state.basket.product);
+    const totalPriseInBasket = useSelector(state => state.basket.price);
+    localStorage.setItem("order", JSON.stringify(allProductsInBasket))
+    localStorage.setItem("price", totalPriseInBasket)
 
     const incrementProduct = () => {
-        dispatch(addProduct(product))
-        setCount(count + 1)
+        copyProduct.countProduct += 1;
+        dispatch(addProduct(copyProduct))
     }
     const decrementProduct = () => {
-        const productDetails = {
-            product: product,
-            count: count,
-        };
-        dispatch(delProduct(productDetails))
-        setCount(count - 1)
+        copyProduct.countProduct -= 1;
+        dispatch(delProduct(copyProduct))
     }
     return (
         <div>
@@ -28,7 +28,7 @@ const TotalItemCounter = ({product}) => {
                 >
                     -
                 </button>
-                <div className={classes.count}>{count}</div>
+                <div className={classes.count}>{copyProduct.countProduct}</div>
                 <button
                     onClick={incrementProduct}
                 >
