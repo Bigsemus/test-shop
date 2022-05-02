@@ -20,7 +20,15 @@
       justify-content: end;
       margin-right: 10px;
     }
-    button{
+.btnDisabled{
+  background-color: darkgray;
+  color: #3b4d61;
+  border-radius: 5px;
+  padding: 3px 25px;
+  margin-left: 10px;
+  font-size: 17px;
+}
+    .btn{
       background-color: #3b4d61;
       color: #f9d10f;
       border-radius: 5px;

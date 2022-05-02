@@ -5,7 +5,8 @@
   "header": {
     "movieShop": "MOVIE SHOP",
     "movie": "ONLY QUALITY MOVIES",
-    "order": "It remains to place an order"
+    "order": "It remains to place an order",
+    "success": "We have received you order :)"
   },
   "login": {
     "login": "Please login",

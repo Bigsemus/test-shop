@@ -43,7 +43,7 @@ const ProductItem = ({product, t}) => {
             </div>
             <button
                 className={
-                    isProductChoosed ? classes.btnPriceDisablet : classes.btnPriceBuy
+                    isProductChoosed ? classes.btnPriceDisabled : classes.btnPriceBuy
                 }
                 onClick={() => addMovieToBasket(product, product.vote_average)}
                 disabled={isProductChoosed}

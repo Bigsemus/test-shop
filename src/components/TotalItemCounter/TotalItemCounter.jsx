@@ -19,6 +19,7 @@ const TotalItemCounter = ({product}) => {
         copyProduct.countProduct -= 1;
         dispatch(delProduct(copyProduct))
     }
+
     return (
         <div>
             <div className={classes.countPrice}>Price: {product.vote_average} $</div>

@@ -12,7 +12,6 @@ const basketSlice = createSlice({
             state.product.push(payload.product);
         },
         setBasketFromLocalStorage: (state, {payload}) => {
-            console.log(payload.product)
             state.price = payload.price;
              state.product = payload.product;
         },

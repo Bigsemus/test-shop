@@ -52,8 +52,10 @@ const HomePage = ({t}) => {
             )}
             {productError && (
                 <>
-                    <p>Error while getting the products:</p>
-                    <pre>JSON.stringify(productError, null, 2)</pre>
+                    <p className={"Error"}>Error while getting the products:</p>
+                    <pre>
+                        {JSON.stringify(productError, null, 2)}
+                    </pre>
                 </>
             )}
             {productsInfo && (
