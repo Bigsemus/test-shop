@@ -15,7 +15,7 @@ const SuccessOrderPage = ({ t }) => {
     set(ref(db, `success/${userId}`), {
       order: data,
       user: userId,
-    })
+    }) // eslint-disable-next-line
       .catch(console.error);
   }
 
