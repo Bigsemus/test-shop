@@ -1,0 +1,63 @@
+
+.TotalProductCardWrap {
+  border-radius: 4px;
+  width: 95%;
+  margin: 0 0 5% 3%;
+
+  &:hover {
+    transform: scale(1.03);
+    transition: all 0.5s;
+  }
+
+  .TotalProductCard {
+    display: flex;
+    border: 2px solid #3b4d61;
+    height: 270px;
+    border-radius: 5px;
+    box-shadow: -10px 10px 10px #3b4d61;
+  }
+
+}
+
+.wrapOverviewCount {
+  display: flex;
+
+  .productOverview {
+    display: block;
+    height: 221px;
+    overflow: hidden;
+    padding: 20px;
+    color: #3b4d61;
+    font-size: 17px;
+  }
+}
+
+.titleContent {
+  text-align: center;
+  padding: 7px 0 0 5px;
+  color: #f9d10f;
+  background-color: #6b7b8c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.btnPriceBuy {
+  display: block;
+  width: 130px;
+  margin-left: auto;
+  margin-top: 25px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #3b4d61;
+  background-color: #f9d10f;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: #6b7b8c;
+    color: #f9d10f;
+  }
+}
+

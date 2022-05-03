@@ -1,0 +1,30 @@
+.countPrice{
+  width: 100px;
+  margin: 10px 0 0 auto;
+  font-weight: bolder;
+  font-size: 17px;
+  color: #6b7b8c;
+}
+
+.wrapCounter{
+  display: flex;
+  padding: 50px 20px;
+  .count{
+    padding: 10px;
+    color: #6b7b8c;
+    font-weight: bolder;
+    font-size: 17px;
+  }
+  button{
+    background-color: #3b4d61;
+    color: #f9d10f;
+    border-radius: 5px;
+    padding: 0px 25px;
+    font-size: larger;
+    font-weight: bolder;
+    &:hover {
+      background-color: #f9d10f;
+      color: #3b4d61;
+    }
+  }
+}

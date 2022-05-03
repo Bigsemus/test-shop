@@ -1,0 +1,46 @@
+{
+  "navBar": {
+    "Home": "Home"
+  },
+  "header": {
+    "movieShop": "MOVIE SHOP",
+    "movie": "ONLY QUALITY MOVIES",
+    "order": "It remains to place an order",
+    "success": "We have received you order :)"
+  },
+  "login": {
+    "login": "Please login",
+    "ask": "Do not you have an account?",
+    "prompt": "Go to Register page"
+  },
+  "register": {
+    "register": "Please register",
+    "ask": "Do not you have an account?",
+    "prompt": "Go to Register page"
+  },
+  "buttons": {
+    "edit": "EDIT",
+    "delete": "DELETE",
+    "submit": "Submit",
+    "back": "Go back",
+    "login": "login",
+    "register": "register",
+    "doYouWant": "Do you want choose?",
+    "buy": "Buy ",
+    "bought": "bought"
+  },
+  "p": {
+    "didNotChoose": "You did not choose anything :("
+  },
+  "input": {
+    "name": "Name",
+    "surname": "Surname",
+    "address": "Address",
+    "phone": "Phone",
+    "loginName": "Enter your name",
+    "loginPass": "Enter your password"
+  },
+  "logout": {
+    "logout": "LogOut"
+  }
+}

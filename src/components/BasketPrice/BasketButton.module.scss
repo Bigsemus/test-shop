@@ -1,0 +1,28 @@
+.basketWrap {
+  position: fixed;
+  top: 60px;
+  right: 25px;
+}
+
+.buttonBasket {
+  background: none;
+  border: none;
+  outline: none;
+  margin-top: 55px;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 67px;
+    text-decoration: none;
+    color: #6b7b8c;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+    transition: all 0.1s;
+  }
+}
