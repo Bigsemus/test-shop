@@ -31,7 +31,7 @@ const SuccessOrderPage = ({ t }) => {
           <LogOut />
         </div>
       </div>
-      <p>Your order:</p>
+      <p className="yourOrder">Your order:</p>
       <pre>
         {JSON.stringify(dataUserOrder, null, 2)}
       </pre>
