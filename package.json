@@ -8,7 +8,10 @@
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "eslint-config-airbnb": "^19.0.4",
+    "firebase": "^9.7.0",
     "formik": "^2.2.9",
+    "i18next": "^21.6.16",
     "i18next-browser-languagedetector": "^6.1.4",
     "i18next-http-backend": "^1.4.0",
     "prop-types": "^15.8.1",
@@ -30,8 +33,21 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "airbnb"
+    ],
+    "rules": {
+      "react/function-component-definition": [
+        2,
+        {
+          "namedComponents": "arrow-function"
+        }
+      ],
+      "react/jsx-props-no-spreading": "off",
+      "jsx-ally/no-static-element-interactions": "off",
+      "jsx-ally/click-events-have-key-events": "off",
+      "linebreak-style": 0
+    }
   },
   "browserslist": {
     "production": [

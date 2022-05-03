@@ -12,37 +12,42 @@
     input {
       height: 50px;
       width: 385px;
-      margin: 10px ;
+      margin: 10px;
       font-size: 25px;
     }
-    .wrapBtnFormSubmit{
+
+    .wrapBtnFormSubmit {
       display: flex;
-      justify-content: end;
       margin-right: 10px;
     }
-.btnDisabled{
-  background-color: darkgray;
-  color: #3b4d61;
-  border-radius: 5px;
-  padding: 3px 25px;
-  margin-left: 10px;
-  font-size: 17px;
-}
-    .btn{
+
+    .btnDisabled {
+      background-color: darkgray;
+      color: #3b4d61;
+      border-radius: 5px;
+      padding: 3px 25px;
+      margin-left: 10px;
+      font-size: 17px;
+    }
+
+    .btn {
       background-color: #3b4d61;
       color: #f9d10f;
       border-radius: 5px;
       padding: 3px 25px;
       margin-left: 10px;
       font-size: 17px;
+
       &:hover {
         background-color: #f9d10f;
         color: #3b4d61;
       }
-      a{
+
+      a {
         text-decoration: none;
         color: #f9d10f;
-        &:hover{
+
+        &:hover {
           color: #3b4d61;
         }
       }

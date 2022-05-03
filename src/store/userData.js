@@ -1,19 +1,21 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const userSlice = createSlice({
-    name: 'user',
-    initialState: {
-        isAuth: false,
-        userData: null,
+  name: 'user',
+  initialState: {
+    isAuth: false,
+    userData: null,
+  },
+  reducers: {
+    getValueIsAuth: (state, action) => {
+      // eslint-disable-next-line no-param-reassign
+      state.isAuth = action.payload;
     },
-    reducers: {
-        getValueIsAuth: (state, action) => {
-            state.isAuth = action.payload;
-        },
-        getValueOrderForm: (state, action) => {
-            state.userData = action.payload;
-        },
+    getValueOrderForm: (state, action) => {
+      // eslint-disable-next-line no-param-reassign
+      state.userData = action.payload;
     },
+  },
 });
 
 export default userSlice.reducer;

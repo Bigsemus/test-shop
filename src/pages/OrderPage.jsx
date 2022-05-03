@@ -1,37 +1,33 @@
-import React, {useState} from 'react';
-import LangBtn from "../utils/helpers/LangBtn";
-import LogOut from "../components/LogOut/LogOut";
-import {withTranslation} from "react-i18next";
+import React from 'react';
+import { withTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
+import LangBtn from '../utils/helpers/LangBtn';
+import LogOut from '../components/LogOut/LogOut';
 import '../styles/App.scss';
-import {Navigate, NavLink} from "react-router-dom";
-import {Formik, Field, Form} from 'formik';
-import NavBar from "../components/NavBar/NavBar";
-import {useDispatch} from "react-redux";
-import {getValueOrderForm} from '../store/userData'
-import OrderUserForm from "../components/OrderUserForm/OrderUserForm";
-import OrderProductList from "../components/OrderProductList/OrderProduct";
+import OrderUserForm from '../components/OrderUserForm/OrderUserForm';
+import OrderProductList from '../components/OrderProductList/OrderProduct';
 
-const OrderPage = ({t}) => {
+const OrderPage = ({ t }) => (
+  <div>
+    <div className="header">
+      <div>
+        {t('header.order')}
+        <LangBtn />
+        <LogOut />
+      </div>
+    </div>
+    <div className="wrapOrderBlock">
+      <OrderProductList />
+      <OrderUserForm />
+    </div>
+    <div className="footer">
+      <p>Svietoslav_Kovalchuk</p>
+    </div>
+  </div>
+);
 
-    return (
-        <div>
-            <div className="header">
-                <div>
-                    {t('header.order')}
-                    <LangBtn/>
-                    {/*<NavBar />*/}
-                    <LogOut/>
-                </div>
-            </div>
-            <div className="wrapOrderBlock">
-                {<OrderProductList/>}
-                {<OrderUserForm/>}
-            </div>
-            <div className="footer">
-                <p>Svietoslav_Kovalchuk</p>
-            </div>
-        </div>
-    );
+OrderPage.propTypes = {
+  t: PropTypes.func.isRequired,
 };
 
 export default withTranslation()(OrderPage);
