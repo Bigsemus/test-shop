@@ -17,9 +17,9 @@ const LogIn = ({ t }) => {
     e.preventDefault();
     const register = localStorage.getItem('register');
     const login = localStorage.getItem('login');
-    if (login && register === null) {
+    if (login && register === null) { // eslint-disable-next-line
       alert('Sorry, you don\'t register :(');
-    } else if (login !== register) {
+    } else if (login !== register) { // eslint-disable-next-line
       alert('Maybe you forgot Password or Login ? You can register now :)');
     } else if (register !== null && login !== null && register === login) {
       setIsAuthLogin(true);
