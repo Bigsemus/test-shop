@@ -11,8 +11,7 @@ const rootReducer = combineReducers(
   },
 );
 
-// eslint-disable-next-line no-unused-vars
-const customMiddleWare = (store) => (next) => (action) => {
+const customMiddleWare = () => (next) => (action) => {
   if ((action) && process.env.NODE_ENV !== 'production') { // eslint-disable-next-line
     console.log('Action triggered:', action);
   }
