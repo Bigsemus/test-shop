@@ -19,6 +19,7 @@ const HomePage = ({ t }) => {
   useEffect(() => {
     if (!mounted.current) {
       //  componentDidMount
+      dispatch(fetchProductList());
       const localStoragePrice = localStorage.getItem('price');
       const localStorageOrder = localStorage.getItem('order');
       if (localStorageOrder) {
@@ -31,7 +32,6 @@ const HomePage = ({ t }) => {
       mounted.current = true;
     } else {
       //  componentDidUpdate
-      dispatch(fetchProductList());
     }
   }, [dispatch]);
 
