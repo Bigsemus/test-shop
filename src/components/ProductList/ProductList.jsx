@@ -11,7 +11,7 @@ const ProductList = (
 ) => {
   if (!products.length) {
     return (
-      <h1 style={{ textAlign: 'center' }}>
+      <h1 className={classes.comingSoon}>
         Coming soon ;)
       </h1>
     );
