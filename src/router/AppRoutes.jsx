@@ -9,7 +9,7 @@ import SuccessOrderPage from '../pages/SuccessOrderPage';
 
 const AppRoutes = () => (
   <Routes>
-    <Route path="/" element={<PrivateRoute />}>
+    <Route exact path="/" element={<PrivateRoute />}>
       <Route exact path="/" element={<HomePage />} />
       <Route exact path="/order" element={<OrderPage />} />
       <Route exact path="/success" element={<SuccessOrderPage />} />
