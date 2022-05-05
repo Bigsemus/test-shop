@@ -1,0 +1,25 @@
+.wrapProductOrderList{
+  padding-top: 150px;
+  width: 68%;
+  .didNotChoose{
+    width: 73%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: bold;
+    color: #6b7b8c;
+    margin-left: 50px;
+  }
+  .doYouWant{
+    background-color: #3b4d61;
+    color: #f9d10f;
+    border-radius: 5px;
+    padding: 5px 10px;
+    //margin-left: 10px;
+    font-size: 17px;
+    &:hover {
+      background-color: #f9d10f;
+      color: #3b4d61;
+    }
+  }
+}
