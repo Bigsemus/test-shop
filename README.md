@@ -2,13 +2,7 @@
 
 Greetings!
 
-The application is workable, although by the end
-I realized what needed to be implemented on
-realTime database.
-I implemented it on localstorage
-and give it away so as not to
-delay it over time, but I can of course redo it.
-
-However, I sent the data in the firebus.
+The application is workable.
+I implemented items data on the localstorage, and sent the order data to the firebase.
 
 Thank you for your attention)
